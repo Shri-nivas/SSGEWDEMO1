@@ -1,0 +1,281 @@
+/* ===============================
+   RESET AND BASE STYLES
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+/* ===============================
+   SLIDESHOW CONTAINER AND SLIDES
+================================ */
+.slideshow-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* ===============================
+   NAVIGATION BAR
+================================ */
+nav {
+  position: fixed; /* Changed from absolute */
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0,0,0,0.7); /* Slightly more opaque so it's readable on scroll */
+  color: #fff;
+  z-index: 1000;
+}
+
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+  background: rgba(255,255,255,0.2);
+  color: #ffd700;
+}
+
+/* ===============================
+   CONTENT BOX IN CENTER
+================================ */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  padding: 20px 40px;
+  border-radius: 8px;
+}
+
+.content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 20px;
+}
+
+/* ===============================
+   SERVICES SECTION
+================================ */
+#services .services-hero {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#services .services-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+#services .services-hero p {
+  font-size: 18px;
+}
+
+#services .services-list {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#services .service {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#services .service h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#services .service p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ===============================
+   PROJECTS SECTION
+================================ */
+#projects .projects-hero {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#projects .projects-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+#projects .projects-hero p {
+  font-size: 18px;
+}
+
+#projects .projects-list {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+#projects .project-card {
+  background: #fff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#projects .project-card h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#projects .project-card p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* ===============================
+   CONTACT SECTION
+================================ */
+#contact {
+  background: #f4f4f4;
+  padding: 60px 20px;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-container input,
+.contact-container textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.contact-container button {
+  padding: 12px;
+  font-size: 18px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-container button:hover {
+  background: #555;
+}
+
+/* ===============================
+   CONTACT SECTION WITH MAP
+================================ */
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-content form {
+  flex: 1;
+}
+
+.map-container {
+  flex: 1;
+  min-height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive for larger screens */
+@media (min-width: 768px) {
+  .contact-content {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
